@@ -1,0 +1,9 @@
+# Site settings
+title: Profound Guild
+realm: Jaedenar
+baseurl: ""
+url: "http://profoundguild.github.io"
+permalink: /:year/:month/:title
+
+# Build settings
+markdown: kramdown

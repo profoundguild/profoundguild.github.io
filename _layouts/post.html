@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<div class="post" id="post-{{ page.index }}">
+
+  <h2>{{ page.title }}</h2>
+  <div class="author">{{ page.author }}</div>
+
+  <div class="entry">
+    {{ content }}
+  </div>
+  <div class="clear"></div>
+  <div class="metadata">
+    <p>
+      Tags: {% include taglist.html tags=page.tags %}
+    </p>
+    This entry was posted on 
+    {% assign d = page.date | date: "%-d"  %}
+    {{ page.date | date: "%A, %B" }} 
+    {% case d %}
+      {% when '1' or '21' or '31' %}{{ d }}st
+      {% when '2' or '22' %}{{ d }}nd
+      {% when '3' or '23' %}{{ d }}rd
+      {% else %}{{ d }}th
+    {% endcase %}, 
+    {{ page.date | date: "%Y at %H:%M" }}.
+  </div>
+
+</div>
+
+<div class="hr"><hr></div>

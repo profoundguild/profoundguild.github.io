@@ -1,0 +1,19 @@
+{% assign width = 300 %}
+{% assign height = 168 %}
+{% assign size = "medium" %}
+<div id="attachment_{{ include.index }}" style="width: {{ width | plus: 10 }}px" class="wp-caption aligncenter">
+  <span class="frame-outer size-{{ size }} wp-image-{{ include.index }}">
+    <span>
+      <span>
+        <span>
+          <span>
+            <a href="{{ include.url | prepend: site.baseurl }}">
+              <img class="size-{{ size }} wp-image-{{ include.index }}" alt="{{ include.alt }}" src="{{ include.previewurl | prepend: site.baseurl }}" width="{{ width }}" height="{{ height }}">
+            </a>
+            <p class="wp-caption-text">{{ include.caption }}</p>
+          </span>
+        </span>
+      </span>
+    </span>
+  </span>
+</div>

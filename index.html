@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+{% for post in site.posts %}
+<div class="post" id="post-{{ post.index }}">
+
+  {% include datebox.html date=post.date %}
+
+  <h2>
+    <a href="{{ post.url | prepend: site.baseurl }}" rel="bookmark" title="Permanent Link to {{ post.title }}">{{ post.title }}</a>
+  </h2>
+  <div class="author">{{ post.author }}</div>
+
+  {{ post.content }}
+  {% include metadata.html tags=post.tags %}
+</div>
+{% endfor %}
