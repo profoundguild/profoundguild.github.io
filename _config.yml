@@ -1,7 +1,7 @@
 # Site settings
 title: Profound Guild
 realm: Jaedenar
-baseurl: ""
+baseurl: "/a/"
 url: "http://profoundguild.github.io"
 permalink: /:year/:month/:title
 

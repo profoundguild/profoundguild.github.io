@@ -1,1 +1,1 @@
-{% for tag in include.tags %}{% if tag != includetags[0] %}, {% endif %}<a href="{{ site.baseurl }}/tag/{{ tag | replace:' ','-' }}/" rel="tag">{{ tag }}</a>{% endfor %}
+{% for tag in include.tags %}{% if tag != include.tags[0] %}, {% endif %}<a href="{{ site.baseurl }}/tag/{{ tag | replace:' ','-' }}/" rel="tag">{{ tag }}</a>{% endfor %}
