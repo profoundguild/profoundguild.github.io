@@ -1,0 +1,19 @@
+{% assign width = 300 %}{% if include.width %}{% assign width = include.width %}{% endif %}
+{% assign height = 168 %}{% if include.height %}{% assign height = include.height %}{% endif %}
+{% assign framesize = "medium" %}{% if include.framesize %}{% assign framesize = include.framesize %}{% endif %}
+{% assign padsize = "" %}{% if include.padsize %}{% assign padsize = include.padsize %}{% endif %}
+<p>
+  <span class="frame-outer {{ padsize }} aligncenter size-{{ framesize }} wp-image-{{ include.index }}">
+    <span>
+      <span>
+        <span>
+          <span>
+            <a href="{{ include.url | prepend: site.baseurl }}">
+              <img class="aligncenter size-{{ framesize }} wp-image-{{ include.index }}" title="{{ include.alt }}" src="{{ include.previewurl | prepend: site.baseurl }}" alt="{{ include.alt }}" width="{{ width }}" height="{{ height }}" />
+            </a>
+          </span>
+        </span>
+      </span>
+    </span>
+  </span>
+</p>

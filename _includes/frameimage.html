@@ -1,8 +1,9 @@
 {% assign width = 300 %}{% if include.width %}{% assign width = include.width %}{% endif %}
 {% assign height = 168 %}{% if include.height %}{% assign height = include.height %}{% endif %}
 {% assign framesize = "medium" %}{% if include.framesize %}{% assign framesize = include.framesize %}{% endif %}
+{% assign padsize = "" %}{% if include.padsize %}{% assign padsize = include.padsize %}{% endif %}
 <div id="attachment_{{ include.index }}" style="width: {{ width | plus: 10 }}px" class="wp-caption aligncenter">
-  <span class="frame-outer size-{{ framesize }} wp-image-{{ include.index }}">
+  <span class="frame-outer {{ padsize }} size-{{ framesize }} wp-image-{{ include.index }}">
     <span>
       <span>
         <span>
