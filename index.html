@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% for post in site.posts %}
+{% for post in paginator.posts %}
 <div class="post" id="post-{{ post.index }}">
 
   {% include datebox.html date=post.date %}
@@ -19,3 +19,12 @@ layout: default
 </div>
 <div class="hr"><hr></div>
 {% endfor %}
+
+<div class="navigation">
+  {% if paginator.next_page %}
+  <div class="next"><a href="{{ paginator.next_page | prepend: "/page/" | prepend: site.baseurl }}">« Older Entries</a></div>
+  {% endif %}
+  {% if paginator.previous_page %}
+  <div class="previous"><a href="{{ paginator.previous_page | prepend: "/page/" | prepend: site.baseurl }}">Newer Entries »</a></div>
+  {% endif %}
+</div>
