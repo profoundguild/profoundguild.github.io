@@ -1,14 +1,14 @@
-{% assign width = 300 %}
-{% assign height = 168 %}
-{% assign size = "medium" %}
+{% assign width = 300 %}{% if include.width %}{% assign width = include.width %}{% endif %}
+{% assign height = 168 %}{% if include.height %}{% assign height = include.height %}{% endif %}
+{% assign framesize = "medium" %}{% if include.framesize %}{% assign framesize = include.framesize %}{% endif %}
 <div id="attachment_{{ include.index }}" style="width: {{ width | plus: 10 }}px" class="wp-caption aligncenter">
-  <span class="frame-outer size-{{ size }} wp-image-{{ include.index }}">
+  <span class="frame-outer size-{{ framesize }} wp-image-{{ include.index }}">
     <span>
       <span>
         <span>
           <span>
             <a href="{{ include.url | prepend: site.baseurl }}">
-              <img class="size-{{ size }} wp-image-{{ include.index }}" alt="{{ include.alt }}" src="{{ include.previewurl | prepend: site.baseurl }}" width="{{ width }}" height="{{ height }}">
+              <img class="size-{{ framesize }} wp-image-{{ include.index }}" alt="{{ include.alt }}" src="{{ include.previewurl | prepend: site.baseurl }}" width="{{ width }}" height="{{ height }}">
             </a>
             <p class="wp-caption-text">{{ include.caption }}</p>
           </span>
