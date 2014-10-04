@@ -1,0 +1,14 @@
+---
+layout: default
+permalink: /404.html
+---
+
+## 404 Not Found
+
+Weary traveler, are you lost?
+
+If there was once something here, it looks like it's gone.
+
+Would you like to go back to the [home page][home]?
+
+[home]: {{ "/" | prepend: site.baseurl }}
